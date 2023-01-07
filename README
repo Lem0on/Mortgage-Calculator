@@ -1,5 +1,5 @@
 1. Make sure java is installed on your machine
 2. Make sure java is added to your PATH, below is a simple step-by-step on how this is done.
 https://www.geeksforgeeks.org/how-to-set-java-path-in-windows-and-linux/
-3. Navigate to Mortgage Plan -> target -> classes and then either double click the run.bat file, or
-open a terminal yourself in the current directory and type "java crosskey.main.App" and hit enter.
+3. Navigate to Mortgage Plan and then either double click the run.bat file, or
+open a terminal yourself and navigate to target/classes/ and then type "java crosskey.main.App" and hit enter.
