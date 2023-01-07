@@ -3,3 +3,6 @@
 https://www.geeksforgeeks.org/how-to-set-java-path-in-windows-and-linux/
 3. Navigate to Mortgage Plan and then either double click the run.bat file, or
 open a terminal yourself and navigate to target/classes/ and then type "java crosskey.main.App" and hit enter.
+
+Link to Docker image on docker hub:
+https://hub.docker.com/r/lem0on/mortgage-calc
