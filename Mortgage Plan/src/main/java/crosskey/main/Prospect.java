@@ -1,33 +1,13 @@
 package crosskey.main;
 
-public class Prospect {
-    private final String name;
-    private final double totalLoan;
-    private final double interest;
-    private final double years;
-
-    public Prospect(String name, double totalLoan, double interest, double years) {
-        this.name = name;
-        this.totalLoan = totalLoan;
-        this.interest = interest;
-        this.years = years;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getTotalLoan() {
-        return totalLoan;
-    }
-
-    public double getInterest() {
-        return interest;
-    }
-
-    public double getYears() {
-        return years;
-    }
+/**
+ * represents a prospect
+ * @param name name of the person
+ * @param totalLoan the total loan
+ * @param interest the yearly interest
+ * @param years amount of years to pay off the mortgage
+ */
+public record Prospect(String name, double totalLoan, double interest, double years) {
 
     @Override
     public String toString() {

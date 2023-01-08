@@ -2,6 +2,9 @@ package crosskey.main;
 
 import java.util.List;
 
+/**
+ * Defines a list of prospects and a way to calculate monthly payments
+ */
 public class MortgageCalc {
     private final List<Prospect> prospectList;
 
@@ -9,6 +12,13 @@ public class MortgageCalc {
         this.prospectList = prospectList;
     }
 
+    /**
+     *
+     * @param interest the yearly interest
+     * @param years in how many years the mortgage will be paid of
+     * @param loan the total loan
+     * @return the monthly cost
+     */
     public double calculate(double interest, double years, double loan) {
         double result;
 
@@ -25,17 +35,28 @@ public class MortgageCalc {
         return prospectList;
     }
 
+    /**
+     * prints the prospects
+     */
     public void print() {
         int count = 1;
         for(Prospect p : prospectList) {
-            double result = calculate(p.getInterest(), p.getYears(), p.getTotalLoan());
+            double result = calculate(p.interest(), p.years(), p.totalLoan());
+            // monthly cost displayed with two decimal places
             String formattedResult = String.format("%.2f", result);
-            System.out.println("Prospect "+count+": "+p.getName()+" wants to borrow "+p.getTotalLoan()+
-                                " € for a period of "+p.getYears()+" years and pay "+formattedResult+" € each month");
+            System.out.println("Prospect "+count+": "+p.name()+" wants to borrow "+p.totalLoan()+
+                               " € for a period of "+p.years()+" years and pay "+formattedResult+" € each month" +
+                               "\n-------------------------------------------------------------------------------------------------");
             count++;
         }
     }
 
+    /**
+     *
+     * @param num the number to be raised
+     * @param power the power to raise to
+     * @return the result of the calculation
+     */
     private double pow(double num, double power) {
         double result = num;
 
@@ -46,6 +67,7 @@ public class MortgageCalc {
         return result;
     }
 
+    // Alternative to using formatted printing, will round to two decimal places
     /*private double round(double num) {
         double x = num * 100.0;
         x += 0.5;

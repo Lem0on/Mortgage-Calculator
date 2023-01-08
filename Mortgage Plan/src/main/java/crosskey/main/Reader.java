@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * represents a file reader
+ */
 public class Reader {
     private final InputStreamReader stream;
 
@@ -12,6 +15,10 @@ public class Reader {
         this.stream = s;
     }
 
+    /**
+     * reads the file input stream and parses the information into a list of prospects
+     * @return the list of prospects
+     */
     public List<Prospect> read() {
         List<Prospect> prospectList = new ArrayList<>();
         try(BufferedReader br = new BufferedReader(stream)) {

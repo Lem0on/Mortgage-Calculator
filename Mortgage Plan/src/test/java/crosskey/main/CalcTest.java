@@ -35,9 +35,9 @@ public class CalcTest {
     public void testFile1() {
         double[] expected = {43.87, 62.87, 59.22, 46.97};
         for(int i = 0; i < calc1.getProspectList().size(); i++) {
-            assertEquals(expected[i], calc1.calculate(calc1.getProspectList().get(i).getInterest(),
-                                    calc1.getProspectList().get(i).getYears(),
-                                    calc1.getProspectList().get(i).getTotalLoan()),  0.01);
+            assertEquals(expected[i], calc1.calculate(calc1.getProspectList().get(i).interest(),
+                                    calc1.getProspectList().get(i).years(),
+                                    calc1.getProspectList().get(i).totalLoan()),  0.01);
         }
     }
 
@@ -45,9 +45,9 @@ public class CalcTest {
     public void testFile2() {
         double[] expected = {75.49, 176.15};
         for(int i = 0; i < calc2.getProspectList().size(); i++) {
-            assertEquals(expected[i], calc2.calculate(calc2.getProspectList().get(i).getInterest(),
-                                    calc2.getProspectList().get(i).getYears(),
-                                    calc2.getProspectList().get(i).getTotalLoan()),  0.01);
+            assertEquals(expected[i], calc2.calculate(calc2.getProspectList().get(i).interest(),
+                                    calc2.getProspectList().get(i).years(),
+                                    calc2.getProspectList().get(i).totalLoan()),  0.01);
         }
     }
 }

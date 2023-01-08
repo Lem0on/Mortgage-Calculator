@@ -1,0 +1,5 @@
+# base image 
+FROM openjdk:19-oracle
+COPY . /src/java
+WORKDIR /src/java
+ENTRYPOINT ["java", "crosskey.main.App"]
