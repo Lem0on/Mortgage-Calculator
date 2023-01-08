@@ -6,3 +6,5 @@ open a terminal yourself and navigate to target/classes/ and then type "java cro
 
 Link to Docker image on docker hub:
 https://hub.docker.com/r/lem0on/mortgage-calc
+
+The docker file itself is located in Mortgage Plan\target\classes
